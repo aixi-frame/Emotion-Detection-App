@@ -1,10 +1,10 @@
 import streamlit as st
-import pickle
+import joblib
 
 # Load files
-tfidf = pickle.load(open("tfidf.pkl", "rb"))
-model = pickle.load(open("emotion_model.pkl", "rb"))
-le = pickle.load(open("label_encoder.pkl", "rb"))
+tfidf = joblib.load("tfidf.pkl")
+model = joblib.load("emotion_model.pkl")
+le    = joblib.load("label_encoder.pkl")
 
 st.set_page_config(page_title="Emotion Detection", page_icon="😊")
 
